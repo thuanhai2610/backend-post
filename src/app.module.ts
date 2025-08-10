@@ -10,7 +10,7 @@ import { PostModule } from './features/post/post.module';
 import { CommentModule } from './features/comments/comment.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({isGlobal: true}),MongooseModule.forRoot('mongodb://localhost:27017/todoapp-writecode3'), AuthModule, PostModule, CommentModule],
+  imports: [ConfigModule.forRoot({isGlobal: true}),MongooseModule.forRoot('mongodb+srv://thuanhai:thuanhai123@cluster0.zeum7vn.mongodb.net/myposts?retryWrites=true&w=majority&appName=Cluster0'), AuthModule, PostModule, CommentModule],
   controllers: [AppController],
   providers: [AppService, {
     provide: APP_INTERCEPTOR,
